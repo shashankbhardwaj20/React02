@@ -1,0 +1,53 @@
+npm manages packages. To configure npm in our project use npm init. This will create package.json file which 
+states npm has been configured successfully. Using dependencies in the .json file , it manages them.
+
+In development, bundlers are tools that help manage dependencies and optimize the delivery of web applications
+by bundling together various assets like JavaScript files, CSS files, images, and more into a single package for deployment.
+Bundlers essentially take modular code written in different files and merge them into a single file (or sometimes multiple files) 
+that can be efficiently served to the browser. This process often involves tasks like transpiling code (e.g., converting newer JavaScript syntax to older versions for compatibility), 
+optimizing assets (e.g., minification, compression), and managing dependencies (e.g., resolving and including required libraries).
+Example veet,parcel etc.
+
+#parcel 
+- Build and host on server
+- HMR - Hot module replacement (File watching algo)
+-Parcel uses a cache to speed up subsequent builds.
+When you build your project, Parcel stores information about your files and their dependencies.
+On the next build, Parcel only processes the files that have changed, rather than rebuilding everything from scratch.
+Bundeling,minification,compression of files.
+
+- consistent hashing
+- code splitting 
+- diffrential Bundeling
+
+The two types of dependencies commonly used in development environments are:
+
+1. Development Dependencies (devDependencies): These are dependencies that are only needed during development and testing of the application,
+but not during its runtime in production. Examples of devDependencies include testing frameworks, compilers, linters,
+and other tools used for development purposes. 
+These dependencies are typically listed in the `devDependencies` section of a project's `package.json` file in Node.js projects, for instance. 
+They are installed when developers run `npm install` or a similar command with a flag like `--save-dev` or `-D`.
+
+2. Production Dependencies (dependencies): These are dependencies that are necessary for the application to run in a production environment.
+They include libraries and modules that the application relies on during runtime. Unlike devDependencies, these dependencies are required for the application to function properly when deployed to production servers. Production dependencies are typically listed in the `dependencies` section of a project's `package.json` file.
+They are installed when developers run `npm install` without any flags.
+
+npx stands for Node Package Execute. It's a tool to execute packages directly from the npm registry.
+Run Packages without Installation
+
+NOT RECOMMENDED! (Instead install react from npm)
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+After you install react and react-dom using npm then you need to import it.
+Note:<script src="App.js"></script> is a considered a noraml JavaScript file (Browsers scripts)
+But normal JavaScript file cann't have import/exports statements.
+To resolve it tell it that it is not a normal JavaScript file instead it is a module.
+
+#browerlist
+"browserlist":[
+    "last 2 Chrome versions",
+    "last 2 Firefox versions"
+]
+add it in package.json file. Work on the specified browers 100% for others it may be
+

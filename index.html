@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Html way -->
+    <h1 id="greet1">hello World!</h1>
+    <!-- Javascript way -->
+    <div id="root"></div>
+    <!-- React way -->
+    <div id="root1">
+        <h1>Hey, I am already Here!</h1>
+    </div>
+</body>
+<script>
+    const heading = document.createElement("h2");
+    heading.innerHTML="Namaste World!";
+    const root = document.getElementById("root");
+    root.appendChild(heading);
+    // Put all this react code in a seperate .js file 
+    // const headingR = React.createElement("h1",{},"Hello from react!");
+    // const Root = ReactDOM.createRoot(document.getElementById("root1"));
+    // Root.render(headingR);
+</script>
+<script type="module" src="./App.js"></script>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "02",
+  "version": "1.0.0",
+  "description": "Second day of learning react",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Shashank Bhardwaj",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserlist":[
+    "last 2 Chrome versions",
+    "last 2 Firefox versions"
+  ] 
+}
